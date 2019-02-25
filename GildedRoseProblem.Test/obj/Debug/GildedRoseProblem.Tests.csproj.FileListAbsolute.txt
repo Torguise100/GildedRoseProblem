@@ -1,0 +1,13 @@
+C:\Users\Dan\source\repos\Gilded Rose Problem\GildedRoseProblem.Test\obj\Debug\GildedRoseProblem.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Dan\source\repos\Gilded Rose Problem\GildedRoseProblem.Test\obj\Debug\GildedRoseProblem.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Dan\source\repos\Gilded Rose Problem\GildedRoseProblem.Test\bin\Debug\GildedRoseProblem.Test.dll
+C:\Users\Dan\source\repos\Gilded Rose Problem\GildedRoseProblem.Test\bin\Debug\GildedRoseProblem.Test.pdb
+C:\Users\Dan\source\repos\Gilded Rose Problem\GildedRoseProblem.Test\bin\Debug\Gilded Rose Problem.exe
+C:\Users\Dan\source\repos\Gilded Rose Problem\GildedRoseProblem.Test\bin\Debug\nunit.framework.dll
+C:\Users\Dan\source\repos\Gilded Rose Problem\GildedRoseProblem.Test\bin\Debug\Gilded Rose Problem.pdb
+C:\Users\Dan\source\repos\Gilded Rose Problem\GildedRoseProblem.Test\bin\Debug\Gilded Rose Problem.exe.config
+C:\Users\Dan\source\repos\Gilded Rose Problem\GildedRoseProblem.Test\bin\Debug\nunit.framework.pdb
+C:\Users\Dan\source\repos\Gilded Rose Problem\GildedRoseProblem.Test\bin\Debug\nunit.framework.xml
+C:\Users\Dan\source\repos\Gilded Rose Problem\GildedRoseProblem.Test\obj\Debug\GildedRoseProblem.Tests.csproj.CopyComplete
+C:\Users\Dan\source\repos\Gilded Rose Problem\GildedRoseProblem.Test\obj\Debug\GildedRoseProblem.Test.dll
+C:\Users\Dan\source\repos\Gilded Rose Problem\GildedRoseProblem.Test\obj\Debug\GildedRoseProblem.Test.pdb
