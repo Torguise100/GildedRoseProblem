@@ -1,7 +1,0 @@
-C:\Users\Dan\source\repos\Gilded Rose Problem\Gilded Rose Problem\bin\Debug\Gilded Rose Problem.exe.config
-C:\Users\Dan\source\repos\Gilded Rose Problem\Gilded Rose Problem\bin\Debug\Gilded Rose Problem.exe
-C:\Users\Dan\source\repos\Gilded Rose Problem\Gilded Rose Problem\bin\Debug\Gilded Rose Problem.pdb
-C:\Users\Dan\source\repos\Gilded Rose Problem\Gilded Rose Problem\obj\Debug\Gilded Rose Problem.csprojResolveAssemblyReference.cache
-C:\Users\Dan\source\repos\Gilded Rose Problem\Gilded Rose Problem\obj\Debug\Gilded Rose Problem.csproj.CoreCompileInputs.cache
-C:\Users\Dan\source\repos\Gilded Rose Problem\Gilded Rose Problem\obj\Debug\Gilded Rose Problem.exe
-C:\Users\Dan\source\repos\Gilded Rose Problem\Gilded Rose Problem\obj\Debug\Gilded Rose Problem.pdb
