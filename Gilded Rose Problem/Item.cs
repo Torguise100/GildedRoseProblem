@@ -30,7 +30,7 @@ namespace GildedRoseProblem
             this.Quality = quality;
         }
 
-        public void UpdateQuality()
+        public virtual void UpdateQuality()
         {
             string nameLowerCase = Name.ToLower();
             if (nameLowerCase == NORMAL_ITEM || nameLowerCase == CONJURED ||
@@ -56,6 +56,27 @@ namespace GildedRoseProblem
             ClampQuality();
         }
 
+        public bool IsValid()
+        {
+            string nameLowerCase = Name.ToLower();
+            return nameLowerCase == NORMAL_ITEM || nameLowerCase == CONJURED || nameLowerCase == SULFURAS ||
+                    nameLowerCase == AGED_BRIE || nameLowerCase == BACKSTAGE_PASSES;
+        }
+
+        public override string ToString()
+        {
+            string itemAsString = "";
+            if (this.IsValid())
+            {
+                itemAsString = Name + " " + SellIn + " " + Quality;
+            }
+            else
+            {
+                itemAsString = "NO SUCH ITEM";
+            }
+            return itemAsString;
+        }
+
         private int GetQualityDecrement()
         {
             int decrement = DEFAULT_DECREMENT;
@@ -63,7 +84,7 @@ namespace GildedRoseProblem
             {
                 if (SellIn < 0)
                 {
-                    decrement = Quality;
+                    decrement = -Quality;
                 }
                 else if(SellIn <= 5)
                 {

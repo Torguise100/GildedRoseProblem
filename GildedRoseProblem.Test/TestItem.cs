@@ -115,12 +115,102 @@ namespace GildedRoseProblem.Test
         }
 
         [Test]
+        public void UpdateQualityOfBackstagePassesSellInNegativeReducesQualityToZero()
+        {
+            Item item = new Item("Backstage Passes", 0, 10);
+            item.UpdateQuality();
+            Assert.AreEqual(0, item.Quality, "Quality should change after age");
+            item.UpdateQuality();
+            Assert.AreEqual(0, item.Quality, "Quality should be 0 if sellIn is negative");
+        }
+
+        [Test]
         public void UpdateQualityOfSulfurasHasNoEffect()
         {
             Item item = new Item("Sulfuras", 2, 2);
             item.UpdateQuality();
             Assert.AreEqual(2, item.Quality, "Sulfuras Quality does not change");
             Assert.AreEqual(2, item.SellIn, "Sulfuras SellIn does not change");
+        }
+
+        [Test]
+        public void TestIsValidForValidItems()
+        {
+            Item item = new Item("Normal Item", 2, 2);
+            Assert.True(item.IsValid(), "Normal Item Should be valid");
+
+            Item brie = new Item("Aged Brie", -1, 0);
+            Assert.True(brie.IsValid(), "Aged Brie Should be valid");
+
+            Item conjured = new Item("Conjured", 3, 50);
+            Assert.True(conjured.IsValid(), "Conjured Should be valid");
+
+            Item sulfuras = new Item("Sulfuras", 2, 2);
+            Assert.True(sulfuras.IsValid(), "Sulfuras Should be valid");
+
+            Item passes = new Item("Backstage Passes", 6, 10);
+            Assert.True(passes.IsValid(), "Backstage Passes Should be valid");
+        }
+
+        [Test]
+        public void TestIsValidForInvalidItems()
+        {
+            Item item = new Item("INVALID ITEM", 2, 2);
+            Assert.False(item.IsValid(), "Invalid Item Should be valid");
+
+            Item chocolate = new Item("Chocolate", -1, 0);
+            Assert.False(chocolate.IsValid(), "Chocolate Should be valid");
+
+            Item catPoster = new Item("Cat Poster", 3, 50);
+            Assert.False(catPoster.IsValid(), "Cat Poster Should be valid");
+        }
+
+        [Test]
+        public void TestToStringReturnsNoSuchItemForInvalidItems()
+        {
+            Item item = new Item("Invalid Item", 2, 2);
+            string output = item.ToString();
+
+            Assert.AreEqual("NO SUCH ITEM", output, "Invalid Item should return NO SUCH ITEM");
+            
+            Item chocolate = new Item("Chocolate", -1, 0);
+            output = item.ToString();
+
+            Assert.AreEqual("NO SUCH ITEM", output, "Chocolate should return NO SUCH ITEM");
+
+            Item catPoster = new Item("Cat Poster", 3, 50);
+            output = item.ToString();
+
+            Assert.AreEqual("NO SUCH ITEM", output, "Cat Poster should return NO SUCH ITEM");
+        }
+
+        [Test]
+        public void TestToStringReturnsNameSellInAndQualityInOrder()
+        {
+            Item item = new Item("Normal Item", 2, 2);
+            string output = item.ToString();
+
+            Assert.AreEqual("Normal Item 2 2", output, "Output should be item name followed by SellIn and Quality");
+
+            Item brie = new Item("Aged Brie", -1, 0);
+            output = brie.ToString();
+
+            Assert.AreEqual("Aged Brie -1 0", output, "Output should be item name followed by SellIn and Quality");
+
+            Item conjured = new Item("Conjured", 3, 50);
+            output = conjured.ToString();
+
+            Assert.AreEqual("Conjured 3 50", output, "Output should be item name followed by SellIn and Quality");
+
+            Item sulfuras = new Item("Sulfuras", 2, 2);
+            output = sulfuras.ToString();
+
+            Assert.AreEqual("Sulfuras 2 2", output, "Output should be item name followed by SellIn and Quality");
+
+            Item passes = new Item("Backstage Passes", 6, 10);
+            output = passes.ToString();
+
+            Assert.AreEqual("Backstage Passes 6 10", output, "Output should be item name followed by SellIn and Quality");
         }
     }
 }
